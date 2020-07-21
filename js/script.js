@@ -18,4 +18,13 @@ button.addEventListener("click", addToMyList) //ERROR: Uncaught TypeError: Canno
 function addToMyList(event){
     event.preventDefault()
     console.log("button pressed!");
+    let newItem=document.createElement("li")  //inside the same function, create a new <li> element
+    newItem.addEventListener("click", event => { //add anonymous function
+        event.preventDefault()
+        moveToCompletedList(newItem);         //calling a function by name which we passed the item through
+
+    });
+
 }
+
+
