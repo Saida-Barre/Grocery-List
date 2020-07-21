@@ -25,8 +25,16 @@ function addToMyList(event){
 
     });
 /*Next, if we want to add a text to <li> element, we need to create a text node. We then need to add input value inside text node so that
-whenever we center an input inside a function, it produces an output.*/
+whenever we enter an input inside a function, it produces an output.*/
 let textNode=document.createTextNode(input.value);
+// Next, we prepend the text to <li>
+newItem.prepend(textNode);
+//then, prepend the newItem element to existing element
+myList.prepend(newItem);
 }
+//create a function and use prepend method to move to item from myList to CompletedList
+function moveToCompletedList(item){
+    moveToCompletedList.prepend(newItem);
+} 
 
 
