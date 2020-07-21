@@ -24,7 +24,9 @@ function addToMyList(event){
         moveToCompletedList(newItem);         //calling a function by name which we passed the item through
 
     });
-
+/*Next, if we want to add a text to <li> element, we need to create a text node. We then need to add input value inside text node so that
+whenever we center an input inside a function, it produces an output.*/
+let textNode=document.createTextNode(input.value);
 }
 
 
